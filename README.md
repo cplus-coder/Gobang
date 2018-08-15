@@ -1,2 +1,4 @@
-# Mogoku
-五子棋
+# Gobang
+
+#How to install
+
