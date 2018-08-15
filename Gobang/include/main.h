@@ -1,6 +1,6 @@
 #pragma once
-#include <conio.h>
+#include "./global.h"
 
 using namespace std;
 
-void init();
+void initialize();

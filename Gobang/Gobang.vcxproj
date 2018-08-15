@@ -144,20 +144,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\control.h" />
+    <ClInclude Include="include\global.h" />
     <ClInclude Include="include\main.h">
       <DeploymentContent>true</DeploymentContent>
     </ClInclude>
-    <ClInclude Include="include\ui_load.h" />
-    <ClInclude Include="include\util.h" />
+    <ClInclude Include="include\ui.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\control.cpp" />
+    <ClCompile Include="src\global.cpp" />
     <ClCompile Include="src\main.cpp">
       <DeploymentContent>true</DeploymentContent>
     </ClCompile>
-    <ClCompile Include="src\ui_load.cpp">
+    <ClCompile Include="src\ui.cpp">
       <DeploymentContent>true</DeploymentContent>
     </ClCompile>
-    <ClCompile Include="src\util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

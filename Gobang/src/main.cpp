@@ -1,22 +1,29 @@
 #include "../include/main.h"
-#include "../include/ui_load.h"
-char global_project_path[MAX_PATH];
+
+extern char global_project_path[MAX_PATH];
+extern int global_route;
+
+extern Asset window;
+extern Asset homePageButton[];
 
 void main()
 {
-		init();
 		init_easyx_ex();
-		render_homepage();
+		initialize();
 		_getch();
 		closegraph();
 		end_easyx_ex();
 }
 
-void init() 
+void initialize()
 {
+		initgraph(window.width, window.height, SHOWCONSOLE);
 		char buffer[MAX_PATH];
 		_getcwd(buffer, MAX_PATH);
 		strncpy(global_project_path, buffer, string(buffer).find_last_of('\\'));
+		setRoute(HOME_PAGE);
+		render_homePage();
+		beginMouseListener();
 }
 
 #if _MSC_VER>=1900
