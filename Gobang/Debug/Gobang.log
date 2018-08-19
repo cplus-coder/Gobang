@@ -1,4 +1,4 @@
-﻿生成启动时间为 2018/8/16 4:17:20。
+﻿生成启动时间为 2018/8/19 22:53:06。
      1>项目“C:\Users\Anadi\Documents\code\Gobang\Gobang\Gobang.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          E:\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\control.cpp
@@ -13,4 +13,4 @@
 
 已成功生成。
 
-已用时间 00:00:01.22
+已用时间 00:00:01.34

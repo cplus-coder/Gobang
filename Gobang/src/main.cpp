@@ -3,7 +3,6 @@
 extern char global_project_path[MAX_PATH];
 extern int global_route;
 
-extern Asset window;
 extern Asset homePageButton[];
 
 void main()
@@ -17,12 +16,12 @@ void main()
 
 void initialize()
 {
-		initgraph(window.width, window.height, SHOWCONSOLE);
+		initgraph(WINDOW_WIDTH, WINDOW_HEIGHT, SHOWCONSOLE);
 		char buffer[MAX_PATH];
 		_getcwd(buffer, MAX_PATH);
 		strncpy(global_project_path, buffer, string(buffer).find_last_of('\\'));
 		setRoute(HOME_PAGE);
-		render_homePage();
+		renderPage(HOME_PAGE);
 		beginMouseListener();
 }
 

@@ -3,24 +3,22 @@ extern int global_route;
 
 extern Asset homePageButton[];
 extern Asset chessboardPageButton[];
-extern Asset archivePageButton[];
+extern Asset introducePageButton[];
+//extern Asset archivePageButton[];
 
 int searchClickButton(Asset *buttonGroup, short x, short y)
 {
 		int index = 0;
-		while (true)
+		for (int index = 0, length = getAssetsLength(buttonGroup); index < length; index++)
 		{
 				if (x > buttonGroup[index].area.left && x < buttonGroup[index].area.right &&
 						y > buttonGroup[index].area.top && y < buttonGroup[index].area.bottom)
 				{
+						cout << "MouseLeft click at (" << x << "," << y << ";Click At Button: " << buttonGroup[index].text << endl;
 						return index;
 				}
-				if (buttonGroup[index].end)
-				{
-						break;
-				}
-				index++;
 		}
+		cout << "MouseLeft click at (" << x << "," << y << ");invalid Click" << endl;
 		return -1;
 }
 
@@ -32,20 +30,17 @@ void onButtonClick(short x, short y)
 						switch (searchClickButton(homePageButton, x, y))
 						{
 								case 0:
-										cout << "开始游戏" << endl;
-										// setRoute(CHESSBOARD_PAGE);
-										// renderChessboardPage()
+										setRoute(CHESSBOARD_PAGE);
+										renderPage(CHESSBOARD_PAGE);
 										break;
 								case 1:
-										cout << "游戏介绍" << endl;
 										break;
 								case 2:
-										cout << "退出游戏" << endl;
 										break;
 								case 3:
-										cout << "读取存档" << endl;
 										break;
-								default: break;
+								default: 
+										break;
 						}
 						break;
 				case CHESSBOARD_PAGE:
@@ -56,12 +51,12 @@ void onButtonClick(short x, short y)
 						}
 						break;
 				case ARCHIVE_PAGE:
-						switch (searchClickButton(archivePageButton, x, y))
-						{
-								case 0:
-										break;
-						}
-						break;
+						//switch (searchClickButton(archivePageButton, x, y))
+						//{
+						//		case 0:
+						//				break;
+						//}
+						//break;
 				default: break;
 
 		};

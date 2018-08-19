@@ -7,9 +7,7 @@
 #include "./ui.h"
 #include "./main.h"
 #include "./control.h"
-#define NONE_CHESS 0
-#define WHITE_CHESS 1
-#define BLACK_CHESS 2
+
 
 using namespace std;
 
@@ -19,11 +17,12 @@ struct Asset { //three types of Asset: only src represent background image£¬only
 		int width;
 		int height;
 		const char* src;
+		bool assetsEnd;
 		const char* text;
 		RECT area;
 		COLORREF textColor;
 		int fontSize;
-		bool end;
+		UINT uFormat;
 };
 
 int getAssetsLength(Asset assets[]);
