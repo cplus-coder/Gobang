@@ -1,3 +1,4 @@
+
 #include "../include/control.h"
 extern int global_route;
 
@@ -34,10 +35,13 @@ void onButtonClick(short x, short y)
 										renderPage(CHESSBOARD_PAGE);
 										break;
 								case 1:
+										setRoute(INTRODUCE_PAGE);
+										renderPage(INTRODUCE_PAGE);
 										break;
 								case 2:
 										break;
 								case 3:
+										exit(0);
 										break;
 								default: 
 										break;
@@ -48,6 +52,16 @@ void onButtonClick(short x, short y)
 						{
 								case 0:
 										break;
+								case 1:
+										break;
+								case 2:
+										break;
+								case 3:
+										break;
+								case 4:
+										setRoute(HOME_PAGE);
+										renderPage(HOME_PAGE);
+										break;
 						}
 						break;
 				case ARCHIVE_PAGE:
@@ -57,6 +71,15 @@ void onButtonClick(short x, short y)
 						//				break;
 						//}
 						//break;
+				case INTRODUCE_PAGE:
+					switch (searchClickButton(introducePageButton, x, y))
+					{
+						case 0:
+								setRoute(HOME_PAGE);
+								renderPage(HOME_PAGE);
+						default:
+								break;
+					}
 				default: break;
 
 		};

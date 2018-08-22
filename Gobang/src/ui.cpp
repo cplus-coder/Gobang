@@ -8,6 +8,7 @@ extern Asset homePageButton[];
 extern Asset chessboardPageBackground[];
 extern Asset chessboardPageButton[];
 extern Asset introducePageBackground[];
+extern Asset introducePageText[];
 extern Asset introducePageButton[];
 
 void renderImage(const char* img_path, int x, int y, int width, int height) // to render transparent image int background with png...
@@ -54,6 +55,11 @@ void renderPage(int pageName)
 				case CHESSBOARD_PAGE:
 						renderAssets(chessboardPageBackground);
 						renderAssets(chessboardPageButton);
+						break;
+				case INTRODUCE_PAGE:
+						renderAssets(introducePageBackground);
+						renderAssets(introducePageText);
+						renderAssets(introducePageButton);
 						break;
 				default:
 						break;
